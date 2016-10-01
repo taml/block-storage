@@ -1,14 +1,14 @@
 # block-storage
 
-This module connects to the Digital Ocean's API and allow you to operate over volumes.
+This module connects to Digital Ocean's API and allows you to operate over volumes.
 
-  > Block Storage is currently in Beta. Some things may not be as you spect. See documentation before using this module.
+  > Block Storage is currently in Beta. Some features may not operate as expected. Please see the documentation before using this module.
 
   > [See Digital Ocean Volumes API Documentation](https://developers.digitalocean.com/documentation/v2/block-storage-beta/)
 
 <center>[![NPM](https://nodei.co/npm/block-storage.png)](https://nodei.co/npm/block-storage/)</center>
 
-## Table of Concepts
+## Table of Contents
 
 - [Installation](#installation)
 - [Authentication: Bearer Token](#authentication-bearer-token)
@@ -21,7 +21,7 @@ This module connects to the Digital Ocean's API and allow you to operate over vo
   - [volumes.detach()](#volumesdetach)
   - [volumes.delete()](#volumesdelete)
   - [volumes.resize()](#volumesresize)
-- [Ussage](#ussage)
+- [Usage](#usage)
   - [Using callbacks](#using-callbacks)
   - [Using promises([#1](https://github.com/MiguhRuiz/block-storage/issues/1))](#using-promises1)
   - [Using `async` functions(ES7/ES2016)](#using-async-functionses7es2016)
@@ -29,7 +29,7 @@ This module connects to the Digital Ocean's API and allow you to operate over vo
 
 ## Installation
 
-To download the Block Storage API Client that I've made simply download it via NPM. NPM is always going to have the latest stable version of it. Be free to add any flag after the command such as `--save` or `--save-dev`
+To download the Block Storage API Client which I've made simply download it via NPM. NPM will always have the latest stable version of the API Client. Please feel free to add any flag after the command such as `--save` or `--save-dev`
 
 ```bash
 
@@ -52,11 +52,11 @@ const volumes = new Volumes({
 
 ## Available resources and methods(API)
 
-`volumes` means the variable that has the client to connect to the Digital Ocean Volumes API correctly configured. See authentication again to see more about that variable.
+Using `volumes` refers to the variable which has the client connect to the Digital Ocean Volumes API, checking it is correctly configured. See authentication again to learn more about this variable.
 
 #### volumes.get()
 
-Brings a single volume using its id.
+Provides a single volume using its id.
 
 ```js
 
@@ -68,7 +68,7 @@ volumes.get(volumeId, (err, volume) => {
 ```
 #### volumes.list()
 
-Brings a list of all volumes on your Digital Ocean's account.
+Provides a list of all volumes on your Digital Ocean account.
 
 ```js
 
@@ -159,7 +159,7 @@ volumes.resize(volumeId, gigabytes, (err, obj) => {
 
 ```
 
-## Ussage
+## Usage
 
 #### Using callbacks
 
@@ -186,7 +186,7 @@ volumes
 
 ```
 
-*See a full example of the ussage of promises on [Tonic](https://tonicdev.com/57cb105a0540e114006f2eda/57cb13534bcf3f140022107b). You will need a valid Digital Ocean API token to run the example.*
+*See a full example of the usage of promises on [Tonic](https://tonicdev.com/57cb105a0540e114006f2eda/57cb13534bcf3f140022107b). You will need a valid Digital Ocean API token to run the example.*
 
 #### Using `async` functions(ES7/ES2016)
 
